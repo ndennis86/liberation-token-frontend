@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{"name": "next"}],
+    "paths": {"@/*": ["./*"]}
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+### **STEP 4: DEPLOY TO VERCEL**
+1. Vercel → New Project
+2. Import repo
+3. Add env vars:
+```
+NEXT_PUBLIC_BACKEND_API=https://hydronations-backend-production.up.railway.app
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x1AaEBb31d121C32b82352BF728d6A172Caf03383
+NEXT_PUBLIC_NETWORK=sepolia
